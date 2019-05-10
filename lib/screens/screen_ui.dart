@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_ui.dart';
 
 class LoginUI extends StatefulWidget {
   @override
@@ -19,6 +20,7 @@ class _LoginUIState extends State<LoginUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       body: Form(
         key: _appKey,
         child: Padding(
@@ -80,7 +82,7 @@ class _LoginUIState extends State<LoginUI> {
                     setState(() {
                       if (_appKey.currentState.validate()) {
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => LoginUI()));
+                            MaterialPageRoute(builder: (context) => HomeUI()));
                       }
                     });
                   },

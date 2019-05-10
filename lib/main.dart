@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/screens/page_on.dart';
 import 'screens/screen_ui.dart';
 import 'dart:async';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        '/a': (BuildContext context) => VideoPage('VideoPage')
+      },
       theme: ThemeData(
           primarySwatch: Colors.pink,
           brightness: Brightness.light,
@@ -19,7 +23,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    super.initState();  
+    super.initState();
     loadScreen();
   }
 
