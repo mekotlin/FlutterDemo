@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-class VideoPage extends StatelessWidget {
+class CommomPage extends StatelessWidget {
   String title = '';
-
-  VideoPage(this.title);
+  CommomPage(this.title);
 
   @override
   Widget build(BuildContext context) {

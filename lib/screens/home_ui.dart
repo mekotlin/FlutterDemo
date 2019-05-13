@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class HomeUI extends StatefulWidget {
@@ -41,19 +43,34 @@ class _HomeUIState extends State<HomeUI> {
                   Navigator.of(context).pushNamed('/a');
                 }),
             ListTile(
-              title: Text('Gallery'),
-              trailing: Icon(Icons.camera),
-              onTap: () => Navigator.of(context).pop(),
-            ),
+                title: Text('Gallery'),
+                trailing: Icon(Icons.camera),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).pushNamed('/b');
+                }),
             ListTile(
               title: Text('Camera Front'),
               trailing: Icon(Icons.camera_front),
-              onTap: () => Navigator.of(context).pop(),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/c');
+              },
             ),
             ListTile(
               title: Text('Camera Rear'),
               trailing: Icon(Icons.camera_rear),
-              onTap: () => Navigator.of(context).pop(),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).pushNamed('/d');
+              },
+            ),
+            ListTile(
+              title: Text('Exit'),
+              trailing: Icon(Icons.exit_to_app),
+              onTap: () {
+                exit(0);
+              },
             ),
           ],
         ),

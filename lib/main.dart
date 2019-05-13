@@ -7,7 +7,10 @@ void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
-        '/a': (BuildContext context) => VideoPage('VideoPage')
+        '/a': (BuildContext context) => CommomPage('VideoPage'),
+        '/b': (BuildContext context) => CommomPage('GalleryPage'),
+        '/c': (BuildContext context) => CommomPage('CameraFront'),
+        '/d': (BuildContext context) => CommomPage('CameraRear'),
       },
       theme: ThemeData(
           primarySwatch: Colors.pink,
